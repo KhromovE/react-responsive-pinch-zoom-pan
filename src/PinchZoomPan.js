@@ -496,7 +496,7 @@ export default class PinchZoomPan extends React.Component {
     //lifecycle methods
     render() {
         const childElement = React.Children.only(this.props.children);
-        const { zoomButtons, maxScale, debug } = this.props;
+        const { zoomButtons, maxScale, debug, style } = this.props;
         const { scale } = this.state;
 
         const touchAction = this.controlOverscrollViaCss
@@ -508,6 +508,7 @@ export default class PinchZoomPan extends React.Component {
             height: '100%',
             overflow: 'hidden',
             touchAction: touchAction,
+            ...style,
         };
 
         return (
@@ -610,7 +611,8 @@ PinchZoomPan.defaultProps = {
     maxScale: 1,
     position: 'topLeft',
     zoomButtons: true,
-    doubleTapBehavior: 'reset'
+    doubleTapBehavior: 'reset',
+    style: {},
 };
 
 PinchZoomPan.propTypes = {
@@ -629,4 +631,5 @@ PinchZoomPan.propTypes = {
     doubleTapBehavior: PropTypes.oneOf(['reset', 'zoom']),
     initialTop: PropTypes.number,
     initialLeft: PropTypes.number,
+    style: PropTypes.object,
 };
