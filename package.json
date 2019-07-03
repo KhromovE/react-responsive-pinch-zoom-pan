@@ -11,7 +11,7 @@
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy",
-    "preinstall": "npm run transpile"
+    "install": "npm run transpile"
   },
   "keywords": [
     "react",
@@ -28,11 +28,6 @@
     "react-dom": "^16.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "7.1.6",
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
@@ -56,6 +51,11 @@
     "url": "git@github.com:bradstiff/react-responsive-pinch-zoom-pan.git"
   },
   "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
     "@fortawesome/free-solid-svg-icons": "^5.7.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
